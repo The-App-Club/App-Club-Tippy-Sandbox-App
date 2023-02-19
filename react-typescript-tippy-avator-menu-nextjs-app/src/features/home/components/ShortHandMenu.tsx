@@ -14,10 +14,12 @@ import {
 import Avatar from '@mui/joy/Avatar'
 import { Placement } from 'tippy.js'
 
-import AccessMenu from './AccessMenu'
-import AccessMenuNav from './AccessMenuNav'
-import DashboardMenu from './DashboardMenu'
-import DashboardMenuNav from './DashboardMenuNav'
+import AccessMenu from '@/features/home/components/AccessMenu'
+import AccessMenuNav from '@/features/home/components/AccessMenuNav'
+import DashboardMenu from '@/features/home/components/DashboardMenu'
+import DashboardMenuNav from '@/features/home/components/DashboardMenuNav'
+import SettingMenu from '@/features/home/components/SettingMenu'
+import SettingMenuNav from '@/features/home/components/SettingMenuNav'
 
 type TippyParam = {
   'data-placement': Placement
@@ -93,6 +95,8 @@ const ShortHandMenu: FC<{ props: TippyParam }> = ({ props }) => {
       {<AccessMenuNav />}
       {<DashboardMenu />}
       {<DashboardMenuNav />}
+      {<SettingMenu />}
+      {<SettingMenuNav />}
     </Box>
   )
 }
