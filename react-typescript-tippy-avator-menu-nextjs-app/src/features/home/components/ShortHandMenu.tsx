@@ -16,6 +16,8 @@ import { Placement } from 'tippy.js'
 
 import AccessMenu from './AccessMenu'
 import AccessMenuNav from './AccessMenuNav'
+import DashboardMenu from './DashboardMenu'
+import DashboardMenuNav from './DashboardMenuNav'
 
 type TippyParam = {
   'data-placement': Placement
@@ -89,6 +91,8 @@ const ShortHandMenu: FC<{ props: TippyParam }> = ({ props }) => {
       <Divider />
       {<AccessMenu />}
       {<AccessMenuNav />}
+      {<DashboardMenu />}
+      {<DashboardMenuNav />}
     </Box>
   )
 }

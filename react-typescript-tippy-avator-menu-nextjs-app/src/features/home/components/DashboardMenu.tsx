@@ -9,7 +9,7 @@ import { ArrowRight } from 'phosphor-react'
 
 import useShortHandMenu from '@/features/home/hooks/useShortHandMenu'
 
-const AccessMenu = () => {
+const DashboardMenu = () => {
   const { opened, menuId, animation, setShortHandMenu } = useShortHandMenu()
   const controls = useAnimationControls()
 
@@ -19,7 +19,7 @@ const AccessMenu = () => {
       return {
         ...prevState,
         opened: true,
-        menuId: 'access',
+        menuId: 'dashboard',
       }
     })
     controls.set({
@@ -87,7 +87,7 @@ const AccessMenu = () => {
           `}
           onClick={handleOpenSubMenu}
         >
-          <Typography>Access</Typography>
+          <Typography>Dashboard</Typography>
           <ArrowRight
             size={32}
             css={css`
@@ -102,4 +102,4 @@ const AccessMenu = () => {
   )
 }
 
-export default AccessMenu
+export default DashboardMenu

@@ -9,7 +9,7 @@ import { ArrowLeft } from 'phosphor-react'
 
 import useShortHandMenu from '@/features/home/hooks/useShortHandMenu'
 
-const AccessMenuNav = () => {
+const DashboardMenuNav = () => {
   const { opened, menuId, setShortHandMenu } = useShortHandMenu()
   const controls = useAnimationControls()
 
@@ -50,7 +50,7 @@ const AccessMenuNav = () => {
   }
 
   useEffect(() => {
-    if (opened && menuId === 'access') {
+    if (opened && menuId === 'dashboard') {
       controls.set({ height: 'auto' })
       controls.start({
         x: '0%',
@@ -69,7 +69,7 @@ const AccessMenuNav = () => {
         opacity: 0,
       })
     }
-  }, [menuId, opened, controls])
+  }, [opened, controls, menuId])
 
   return (
     <Box
@@ -123,7 +123,7 @@ const AccessMenuNav = () => {
             }
           `}
         >
-          <Typography>By Walk</Typography>
+          <Typography>Settings</Typography>
         </ListItem>
         <ListItem
           css={css`
@@ -136,7 +136,7 @@ const AccessMenuNav = () => {
             }
           `}
         >
-          <Typography>By Train</Typography>
+          <Typography>Articles</Typography>
         </ListItem>
         <ListItem
           css={css`
@@ -149,11 +149,11 @@ const AccessMenuNav = () => {
             }
           `}
         >
-          <Typography>By Car</Typography>
+          <Typography>Statistics</Typography>
         </ListItem>
       </List>
     </Box>
   )
 }
 
-export default AccessMenuNav
+export default DashboardMenuNav
